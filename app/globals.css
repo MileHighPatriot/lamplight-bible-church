@@ -1,0 +1,253 @@
+@import "tailwindcss";
+
+/*
+  Lamplight Bible Church — "lamplight on an open page".
+  Evening indigo for depth, parchment and paper for reading, and one warm
+  lamp-gold accent. A quiet sage for secondary tags. Newsreader (an editorial
+  serif made for long reading) carries headings and Scripture; Figtree keeps
+  the interface friendly and plain.
+*/
+@theme {
+  --color-night: #141729;
+  --color-night-2: #1c2036;
+  --color-night-3: #272c47;
+  --color-dusk: #3a4066;
+  --color-mist: #aeb2c8;
+  --color-parchment: #f5efe3;
+  --color-paper: #fffcf5;
+  --color-linen: #ebe2d0;
+  --color-line: #ddd2bd;
+  --color-ink: #1d1b16;
+  --color-stone: #5d584c;
+  --color-gold: #e5ab45;
+  --color-gold-soft: #f6d99d;
+  --color-ember: #8a4c0f;
+  --color-sage: #53654e;
+  --color-sage-soft: #dfe6d7;
+  --color-clay: #b4643f;
+  --color-clay-deep: #8f4a2b;
+  --color-live: #e2493b;
+
+  --font-serif: var(--font-newsreader), ui-serif, Georgia, serif;
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+
+  --animate-rise: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  --animate-flicker: flicker 5s ease-in-out infinite;
+  --animate-pulse-live: pulse-live 1.6s ease-in-out infinite;
+
+  /* Transform only: fading text in would delay LCP and fail contrast checks mid-animation. */
+  @keyframes rise {
+    from {
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes flicker {
+    0%,
+    100% {
+      opacity: 0.9;
+      transform: scale(1);
+    }
+    45% {
+      opacity: 1;
+      transform: scale(1.03);
+    }
+    70% {
+      opacity: 0.85;
+      transform: scale(0.99);
+    }
+  }
+  @keyframes slide-up {
+    from {
+      transform: translateY(18px);
+    }
+    to {
+      transform: none;
+    }
+  }
+  @keyframes pulse-live {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 rgb(226 73 59 / 0.55);
+    }
+    60% {
+      box-shadow: 0 0 0 8px rgb(226 73 59 / 0);
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--color-parchment);
+    color: var(--color-ink);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  ::selection {
+    background: var(--color-gold-soft);
+    color: var(--color-night);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@utility wrap {
+  width: 100%;
+  max-width: 76rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  @media (width >= 40rem) {
+    padding-inline: 2rem;
+  }
+}
+
+@utility section-y {
+  padding-block: 4.5rem;
+  @media (width >= 64rem) {
+    padding-block: 7rem;
+  }
+}
+
+/* Small caps label above headings. */
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+@utility display {
+  font-family: var(--font-serif);
+  font-size: clamp(2.6rem, 6.4vw, 5.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  font-weight: 400;
+}
+
+@utility h-section {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4.2vw, 3.3rem);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+}
+
+@utility scripture {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Soft circle of lamplight behind a section. */
+@utility lamp-glow {
+  background-image: radial-gradient(
+    ellipse at var(--glow-x, 70%) var(--glow-y, 30%),
+    rgb(229 171 69 / 0.22),
+    rgb(229 171 69 / 0.06) 35%,
+    transparent 65%
+  );
+}
+
+/* Faint paper grain for parchment sections. */
+@utility grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.4 0 0 0 0 0.33 0 0 0 0 0.2 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  background: var(--color-gold);
+  color: var(--color-night);
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Rule with a small lamp flame in the middle. */
+.flame-rule {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  color: var(--color-gold);
+}
+.flame-rule::before,
+.flame-rule::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: currentColor;
+  opacity: 0.35;
+}
+
+/* Scroll reveal: a short slide with no fade, so text is never shown at low contrast. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: slide-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 40%;
+    }
+  }
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.25s;
+}
+
+/* Print just the page content (sermon notes, the reading plan). */
+@media print {
+  body > header,
+  body > footer,
+  body > div.fixed,
+  body > [role="status"],
+  .skip-link,
+  .print-hidden {
+    display: none !important;
+  }
+  body {
+    background: white;
+  }
+  .reveal {
+    animation: none !important;
+  }
+}

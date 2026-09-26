@@ -1,0 +1,202 @@
+{
+  "band": {
+    "width": 960,
+    "height": 640,
+    "widths": [
+      480,
+      640,
+      800,
+      960
+    ]
+  },
+  "bible-coffee": {
+    "width": 960,
+    "height": 702,
+    "widths": [
+      480,
+      640,
+      800,
+      960
+    ]
+  },
+  "bible-glow": {
+    "width": 960,
+    "height": 721,
+    "widths": [
+      480,
+      640,
+      800,
+      960
+    ]
+  },
+  "bible-lamp": {
+    "width": 960,
+    "height": 1280,
+    "widths": [
+      480,
+      640,
+      800,
+      960
+    ]
+  },
+  "bible-notes": {
+    "width": 960,
+    "height": 683,
+    "widths": [
+      480,
+      640,
+      800,
+      960
+    ]
+  },
+  "child-couch": {
+    "width": 960,
+    "height": 639,
+    "widths": [
+      480,
+      640,
+      800,
+      960
+    ]
+  },
+  "couple-bible": {
+    "width": 960,
+    "height": 641,
+    "widths": [
+      480,
+      640,
+      800,
+      960
+    ]
+  },
+  "family-grass": {
+    "width": 960,
+    "height": 640,
+    "widths": [
+      480,
+      640,
+      800,
+      960
+    ]
+  },
+  "family-park": {
+    "width": 960,
+    "height": 640,
+    "widths": [
+      480,
+      640,
+      800,
+      960
+    ]
+  },
+  "friends-laughing": {
+    "width": 960,
+    "height": 677,
+    "widths": [
+      480,
+      640,
+      800,
+      960
+    ]
+  },
+  "guitar": {
+    "width": 960,
+    "height": 640,
+    "widths": [
+      480,
+      640,
+      800,
+      960
+    ]
+  },
+  "hands-bible": {
+    "width": 960,
+    "height": 640,
+    "widths": [
+      480,
+      640,
+      800,
+      960
+    ]
+  },
+  "kid-laughing": {
+    "width": 960,
+    "height": 641,
+    "widths": [
+      480,
+      640,
+      800,
+      960
+    ]
+  },
+  "kids-reading": {
+    "width": 960,
+    "height": 1438,
+    "widths": [
+      480,
+      640,
+      800,
+      960
+    ]
+  },
+  "men-talking": {
+    "width": 960,
+    "height": 1440,
+    "widths": [
+      480,
+      640,
+      800,
+      960
+    ]
+  },
+  "mountain": {
+    "width": 960,
+    "height": 639,
+    "widths": [
+      480,
+      640,
+      800,
+      960
+    ]
+  },
+  "praying": {
+    "width": 960,
+    "height": 641,
+    "widths": [
+      480,
+      640,
+      800,
+      960
+    ]
+  },
+  "worship-crowd": {
+    "width": 960,
+    "height": 540,
+    "widths": [
+      480,
+      640,
+      800,
+      960
+    ]
+  },
+  "worship-hand": {
+    "width": 960,
+    "height": 640,
+    "widths": [
+      480,
+      640,
+      800,
+      960
+    ]
+  },
+  "worship-warm": {
+    "width": 960,
+    "height": 761,
+    "widths": [
+      480,
+      640,
+      800,
+      960
+    ]
+  }
+}
