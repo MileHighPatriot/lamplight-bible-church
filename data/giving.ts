@@ -38,7 +38,7 @@ export const partners = [
 
 export const otherWays = [
   { icon: "gift", title: "In person", body: "We don't pass a plate. There are giving boxes by every door at the back of the room." },
-  { icon: "mail", title: "By check", body: "Make it out to Lamplight Bible Church and mail it to 8615 E Orchard Rd, Greenwood Village, CO 80111." },
+  { icon: "mail", title: "By check", body: "Make it out to Lamplight Bible Church and mail it to 800 Example Mesa Dr, Greenwood Village, CO." },
   { icon: "phone", title: "By text", body: "Text an amount, like 50, to (303) 555-0164. The first time, you'll get a link to set up." },
   { icon: "shield", title: "Stock, IRA & donor-advised funds", body: "Give appreciated stock, a qualified charitable distribution, or a DAF grant. Email the office for our transfer details and EIN." },
 ];

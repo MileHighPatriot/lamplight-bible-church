@@ -18,10 +18,8 @@ export default function JsonLd() {
       streetAddress: site.address.street,
       addressLocality: site.address.city,
       addressRegion: site.address.region,
-      postalCode: site.address.postal,
       addressCountry: "US",
     },
-    geo: { "@type": "GeoCoordinates", latitude: site.geo.lat, longitude: site.geo.lon },
     event: weekly
       .filter((g) => g.name === "Sunday Worship" || g.id === "midweek")
       .map((g) => ({

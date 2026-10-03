@@ -36,7 +36,7 @@ function ics(g: Gathering, when: Date) {
     `DTSTART;TZID=America/Denver:${stamp(when)}`,
     `DTEND;TZID=America/Denver:${stamp(end)}`,
     `SUMMARY:${g.name} at Lamplight`,
-    `LOCATION:${site.address.street}\\, ${site.address.city}\\, ${site.address.region} ${site.address.postal}`,
+    `LOCATION:${site.address.street}\\, ${site.address.city}\\, ${site.address.region}`,
     "DESCRIPTION:Arrive 15 minutes early. Guest parking is in the front row of the back lot off Yosemite St.",
     "END:VEVENT",
     "END:VCALENDAR",
@@ -88,7 +88,7 @@ export default function VisitPlanner() {
       title: `Arrive by ${arriveBy}`,
       body:
         arrive === "train"
-          ? "Take the E or H line to Orchard Station. Walk east on Orchard Road about six minutes; we're on the right, just past Yosemite."
+          ? "Take the E or R line to Orchard Station. Walk east on Orchard Road about six minutes; we're on the right, just past Yosemite."
           : arrive === "bike"
             ? "Bike racks are by the east doors, under the overhang. The High Line Canal trail connects about a mile north."
             : `Pull into the back lot off Yosemite Street. The front row, marked with lamp signs, is saved for guests${needs.includes("access") ? ", and the accessible spaces are right by the east doors" : ""}.`,

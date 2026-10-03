@@ -54,6 +54,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <a href="#main" className="skip-link">
           Skip to content
         </a>
+        <aside aria-label="Concept project notice" className="border-b border-line bg-sage-soft text-ink">
+          <p className="wrap py-2 text-sm leading-5 text-pretty">
+            Concept project: a sample site built by 5280 Web Solutions. Lamplight Bible Church is not a real church.{" "}
+            <a href="https://5280webs.com" className="font-semibold whitespace-nowrap text-night underline underline-offset-4 hover:text-ember">
+              See more at 5280webs.com
+            </a>
+          </p>
+        </aside>
         <SnowBanner />
         <Header />
         <ViewTransition>

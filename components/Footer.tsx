@@ -45,7 +45,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-paper/10">
-        <div className="wrap flex flex-col gap-3 py-6 text-[0.8rem] text-mist sm:flex-row sm:items-center sm:justify-between">
+        <div className="wrap flex flex-col gap-3 py-6 text-sm text-mist sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {new Date().getFullYear()} {site.name}. Independent · Non-denominational · Greenwood Village, Colorado.
           </p>

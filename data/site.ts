@@ -1,7 +1,8 @@
 /**
  * Single edit point for church details. Lamplight is a fictional church built
  * as a portfolio concept: phone numbers use the 555-01xx fiction range and the
- * address is illustrative.
+ * street is made up (no ZIP), so the site never points at a real building.
+ * Maps links search only the city and state.
  */
 export const site = {
   name: "Lamplight Bible Church",
@@ -19,15 +20,14 @@ export const site = {
   email: "hello@lamplight.example",
   prayerEmail: "prayer@lamplight.example",
   address: {
-    street: "8615 E Orchard Rd",
+    street: "800 Example Mesa Dr",
     city: "Greenwood Village",
     region: "CO",
-    postal: "80111",
   },
   geo: { lat: 39.6103, lon: -104.8871 },
   directions:
     "Just east of I-25 at Orchard Road. Turn south on Yosemite Street, then left into the lot behind the building.",
-  lightRail: "Orchard Station (E and H lines) is a 6-minute walk. Head east on Orchard Road.",
+  lightRail: "Orchard Station (E and R lines) is a 6-minute walk. Head east on Orchard Road.",
   officeHours: "Tue–Thu, 9am–3pm",
   youtube: "https://www.youtube.com/@lamplightbible",
   founded: 2013,
@@ -35,5 +35,5 @@ export const site = {
   movedIn: 2019,
 };
 
-export const fullAddress = `${site.address.street}, ${site.address.city}, ${site.address.region} ${site.address.postal}`;
-export const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullAddress)}`;
+export const fullAddress = `${site.address.street}, ${site.address.city}, ${site.address.region}`;
+export const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${site.address.city}, ${site.address.region}`)}`;

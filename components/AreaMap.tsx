@@ -1,12 +1,13 @@
 /**
- * Hand-drawn style map of the church's corner of the Tech Center: I-25,
- * Orchard Road, the E/H light rail line and its stations. Not to scale.
+ * Hand-drawn style map of the Tech Center around Orchard Station: I-25,
+ * Orchard Road, the E/R light rail lines and their stations. Not to scale.
+ * Lamplight is fictional, so the map marks no building.
  */
 export default function AreaMap({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 520 380" role="img" aria-labelledby="map-title" className={className}>
       <title id="map-title">
-        Map: Lamplight is just east of I-25 on Orchard Road, a six-minute walk from Orchard light rail station.
+        Map of the Tech Center around Orchard light rail station, just east of I-25.
       </title>
       <rect width="520" height="380" rx="24" fill="var(--color-paper)" />
       {/* blocks */}
@@ -29,7 +30,7 @@ export default function AreaMap({ className = "" }: { className?: string }) {
       </g>
       <g fontSize="11" fontWeight="700" fill="var(--color-stone)" letterSpacing="0.08em">
         <text x="440" y="110">BELLEVIEW</text>
-        <text x="420" y="228" fill="var(--color-ink)">ORCHARD RD</text>
+        <text x="400" y="228" fill="var(--color-ink)">ORCHARD ROAD</text>
         <text x="298" y="372" transform="rotate(-90 298 372)" dx="40">YOSEMITE ST</text>
       </g>
       {/* I-25 */}
@@ -53,17 +54,6 @@ export default function AreaMap({ className = "" }: { className?: string }) {
           </text>
         </g>
       ))}
-      {/* walking route */}
-      <path d="M233 236H310" stroke="var(--color-gold)" strokeWidth="3" strokeDasharray="2 6" strokeLinecap="round" fill="none" />
-      <text x="258" y="258" fontSize="10" fill="var(--color-ember)" fontWeight="700">6 min walk</text>
-      {/* church */}
-      <g transform="translate(326 176)">
-        <rect x="-12" y="-6" width="96" height="46" rx="10" fill="var(--color-night)" />
-        <path d="M6 1c3 3.4 4.6 6 4.6 8.4a4.6 4.6 0 0 1-9.2 0C1.4 7 3 4.4 6 1Z" fill="var(--color-gold)" transform="translate(-2 6)" />
-        <text x="16" y="13" fontSize="12" fontWeight="700" fill="var(--color-paper)">Lamplight</text>
-        <text x="16" y="29" fontSize="10" fill="var(--color-mist)">Parking in back</text>
-        <path d="M30 40l8 12 8-12Z" fill="var(--color-night)" />
-      </g>
       <g transform="translate(470 330)" fill="var(--color-stone)" fontSize="11" fontWeight="700">
         <path d="M0-26l6 14h-12Z" fill="var(--color-stone)" />
         <text x="0" y="4" textAnchor="middle">N</text>
