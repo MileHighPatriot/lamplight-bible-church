@@ -1,6 +1,6 @@
 /**
  * Hand-drawn style map of the Tech Center around Orchard Station: I-25,
- * Orchard Road, the E/R light rail lines and their stations. Not to scale.
+ * the E/R light rail lines and their stations. Not to scale.
  * Lamplight is fictional, so the map marks no building.
  */
 export default function AreaMap({ className = "" }: { className?: string }) {
@@ -30,8 +30,6 @@ export default function AreaMap({ className = "" }: { className?: string }) {
       </g>
       <g fontSize="11" fontWeight="700" fill="var(--color-stone)" letterSpacing="0.08em">
         <text x="440" y="110">BELLEVIEW</text>
-        <text x="400" y="228" fill="var(--color-ink)">ORCHARD ROAD</text>
-        <text x="298" y="372" transform="rotate(-90 298 372)" dx="40">YOSEMITE ST</text>
       </g>
       {/* I-25 */}
       <path d="M205 10C190 110 214 190 196 270S178 350 184 380" stroke="#c8b99a" strokeWidth="22" fill="none" strokeLinecap="round" />

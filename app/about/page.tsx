@@ -29,7 +29,7 @@ const story = [
   },
   {
     year: "2019",
-    title: "A home on Orchard Road",
+    title: "A home in the Tech Center",
     body: "We buy a tired two-story office building just off I-25 and turn the ground floor into an auditorium and the second into kids rooms and classrooms. Volunteers do most of the demolition.",
   },
   {

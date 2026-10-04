@@ -26,8 +26,8 @@ export const site = {
   },
   geo: { lat: 39.6103, lon: -104.8871 },
   directions:
-    "Just east of I-25 at Orchard Road. Turn south on Yosemite Street, then left into the lot behind the building.",
-  lightRail: "Orchard Station (E and R lines) is a 6-minute walk. Head east on Orchard Road.",
+    "Free parking in the lot behind the building.",
+  lightRail: "Orchard Station (E and R lines) is a 6-minute walk.",
   officeHours: "Tue–Thu, 9am–3pm",
   youtube: "https://www.youtube.com/@lamplightbible",
   founded: 2013,

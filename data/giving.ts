@@ -3,7 +3,7 @@ export const funds = [
   { id: "general", name: "General Fund", note: "Ministry, staff, and the building. Where most giving goes." },
   { id: "missions", name: "Missions", note: "The Hendersons in Peru and our local partners." },
   { id: "benevolence", name: "Care & Benevolence", note: "Rent, groceries, and car repairs for people in a hard spot." },
-  { id: "building", name: "Building Fund", note: "Paying down the mortgage on the Orchard Road building." },
+  { id: "building", name: "Building Fund", note: "Paying down the mortgage on our building." },
 ];
 
 /** Share of the 2026 budget, in percent. Adds to 100. */

@@ -42,7 +42,7 @@ export const stages: Stage[] = ["Everyone", "Young adults", "Couples", "Families
 const sunday = "Sunday's passage in Romans";
 
 export const groups: Group[] = [
-  { id: "g1", name: "Orchard Road", hosts: "Tom & Kathy Albrecht", area: "Greenwood Village", day: 2, time: "18:30", stage: "Everyone", study: sunday, kids: false, full: false, note: "Dessert first, then discussion. Ten minutes from the church." },
+  { id: "g1", name: "Tech Center", hosts: "Tom & Kathy Albrecht", area: "Greenwood Village", day: 2, time: "18:30", stage: "Everyone", study: sunday, kids: false, full: false, note: "Dessert first, then discussion. Ten minutes from the church." },
   { id: "g2", name: "Westlands Park Families", hosts: "Ben & Aubrey Carter", area: "Greenwood Village", day: 5, time: "17:30", stage: "Families", study: sunday, kids: true, full: false, note: "Potluck dinner. Kids play in the basement with a rotating sitter." },
   { id: "g3", name: "Dry Creek", hosts: "Samuel & Ada Okafor", area: "Centennial", day: 1, time: "19:00", stage: "Couples", study: sunday, kids: false, full: false, note: "Married and engaged couples. Childcare stipend available." },
   { id: "g4", name: "Streets at SouthGlenn", hosts: "Priya Natarajan", area: "Centennial", day: 4, time: "19:00", stage: "Women", study: "1 Samuel: A Heart After God", kids: false, full: false, note: "Women of every age. We finish at 8:30 sharp." },

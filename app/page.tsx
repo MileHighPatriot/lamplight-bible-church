@@ -20,7 +20,7 @@ const firstVisit = [
   {
     icon: "car",
     title: "Park in back",
-    body: "Pull into the lot behind the building off Yosemite. The front row is saved for first-time guests.",
+    body: "Pull into the lot behind the building. The front row is saved for first-time guests.",
   },
   {
     icon: "child",
@@ -362,7 +362,7 @@ export default function Home() {
                   <em>in the heart of the Tech Center.</em>
                 </>
               }
-              lede={`We meet in a former office building on Orchard Road that we've called home since ${site.movedIn}. Plenty of parking, and a short walk from the light rail.`}
+              lede={`We meet in a former office building in the Tech Center that we've called home since ${site.movedIn}. Plenty of parking, and a short walk from the light rail.`}
             />
             <ul className="reveal mt-8 grid gap-4 text-[1.02rem]">
               <li className="flex gap-3">
